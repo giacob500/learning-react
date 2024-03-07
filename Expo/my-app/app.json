@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "my-app",
+    "slug": "my-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/jiajiaicon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/jiajiaicon.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#0071d4"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/jiajiaicon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/MadimiOne-Regular.ttf"]
+        }
+      ]
+    ]
+  }
+}
