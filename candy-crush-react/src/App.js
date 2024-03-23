@@ -190,7 +190,7 @@ const App = () => {
           />
         ))}
       </div>
-      <ScoreBoard score={scoreDisplay}></ScoreBoard>
+      <div className="square"><ScoreBoard score={scoreDisplay}></ScoreBoard></div>
     </div>
   );
 }
