@@ -1,4 +1,5 @@
-.app {
+/* CONTENT ORIGINALLY IN THE TUTORIAL */
+.app {            /* This was originnaly used in the tutorial */
   display: flex;
   flex-direction: column; /* Stack children vertically */
   justify-content: center;
@@ -19,6 +20,7 @@
 }
 
 .score-board {
+  padding: 20px;
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
@@ -30,4 +32,50 @@
   box-shadow: 5px 5px 10px 1px #3e3e3e;
   border-radius: 10px;
   margin-top: 25px; /* Optional: Add margin between children */
+}
+
+/* CONTENT ADDED BY ME */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {        /* Alternative to .app */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+}
+
+.square2 {
+  margin-top: 15px;
+  border-radius: 15px;
+background: #f75575;
+box-shadow: inset 20px 20px 15px #d24863,
+            inset -20px -20px 15px #ff6287;
 }

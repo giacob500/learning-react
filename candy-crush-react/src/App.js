@@ -4,9 +4,10 @@ import blueCandy from './images/ramen.png'
 import greenCandy from './images/5787180.png'
 import orangeCandy from './images/Pizza-icon.png'
 import purpleCandy from './images/4952687.png'
-import redCandy from './images/1531385.png'
+import redCandy from './images/5346088.png'
 import yellowCandy from './images/395232.png'
 import blank from './images/BLANK_ICON.png'
+import videoBg from './images/videoBg.mp4'
 
 const width = 8
 const candyColors = [
@@ -172,25 +173,30 @@ const App = () => {
   }, [checkForColumnOfFour, checkForRowOfFour, checkForColumnOfThree, checkForRowOfThree, moveIntoSquareBelow, currentColorArrangement])
 
   return (
-    <div className="app">
-      <div className="game">
-        {currentColorArrangement.map((candyColor, index) => (
-          <img
-            key={index}
-            src={candyColor}
-            alt={candyColor}
-            data-id={index}
-            draggable={true}
-            onDragStart={dragStart}
-            onDragOver={(e) => e.preventDefault()}
-            onDragEnter={(e) => e.preventDefault()}
-            onDragLeave={(e) => e.preventDefault()}
-            onDrop={dragDrop}
-            onDragEnd={dragEnd}
-          />
-        ))}
+    <div className="main">
+      <div className="overlay"></div>
+      <video src={videoBg} autoPlay loop muted />
+      <div className="content">
+        <div className="game">
+          {currentColorArrangement.map((candyColor, index) => (
+            <img
+              key={index}
+              src={candyColor}
+              alt={candyColor}
+              data-id={index}
+              draggable={true}
+              onDragStart={dragStart}
+              onDragOver={(e) => e.preventDefault()}
+              onDragEnter={(e) => e.preventDefault()}
+              onDragLeave={(e) => e.preventDefault()}
+              onDrop={dragDrop}
+              onDragEnd={dragEnd}
+            />
+          ))}
+        </div>
+        <div className="square2"><ScoreBoard score={scoreDisplay}></ScoreBoard></div>
       </div>
-      <div className="square"><ScoreBoard score={scoreDisplay}></ScoreBoard></div>
+    
     </div>
   );
 }
